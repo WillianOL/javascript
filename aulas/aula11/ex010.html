@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de velocidade</title>
+</head>
+<body>
+    <h1>Sistema de velocidade</h1>
+    Velocidade do carro: <input type="number" name="vel-p" id="vel-p"> Km/h
+    <input type="button" value="Medir" onclick="medir()">
+    <div id="resultado">
+        Resultado
+    </div>
+
+    <script>
+        function medir(){
+            var valor = document.querySelector('input#vel-p')
+            var vel = Number(valor.value)
+            var res = document.querySelector('div#resultado')
+            res.innerHTML = `<p>Sua velocidade era de <strong>${vel}km/h</strong></p>`
+            if( vel > 70){
+                res.innerHTML += `<p><strong>MULTADO!</strong> Você estava <strong>acima</strong> da velocidade permitida!</p>`
+            }
+            res.innerHTML += '<p>Sempre use cinto de segurança!</p>'
+            
+
+        }
+
+    </script>
+</body>
+</html>

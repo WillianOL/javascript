@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de notas</title>
+</head>
+<body>
+    <h1>Calculando a media de notas</h1>
+    <input type="number" name="nota01" id="nota01">
+    <input type="number" name="nota02" id="nota02">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="resultado">
+        Resultado das notas: 
+    </div>
+
+    <script>
+        function checar(){
+            var nota1 = Number(document.querySelector ('#nota01').value)
+            var nota2 = Number(document.querySelector ('#nota02').value)
+            var res = document.querySelector ('#resultado')
+            var media = (nota1 + nota2) / 2
+            res.innerHTML = `Sua media foi de ${media}`
+
+            if ( media == 10 ){
+                res.innerHTML += '<br><strong>APROVADO COM DISTINÇÃO!</strong> Você tirou nota maxima. Parabéns!'
+            } else {
+                if ( media >= 6){
+                res.innerHTML += '<br><STRONG>APROVADO!</STRONG> Sua nota está acima da media, você passou!'
+                } else {
+                    if ( media < 6 ){
+                        res.innerHTML += '<br><strong>REPROVADO!</strong> Sua nota está abaixo da media, você não passou...'
+                    }
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
