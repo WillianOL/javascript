@@ -18,10 +18,9 @@
     <h1>Olá, mundo!</h1>
     <p>Me livrando da maldição de programadores :)</p>
     
-    <script> //O script é a forma de insirir um código JS no proprio documento HTML (inline)
-        window.alert('Hello, world!!') //O alert serve para mostrarmos uma mensagem/alerta no site. Com uma mensagem expecifica e um botão de OK.
-        window.confirm('Como foi seu dia?') //Serve para mostrar uma mensagem na tela, com os botões OK e Cancelar.
-        window.prompt('Qual é o seu nome?') //Irá abrir uma caixa de texto, com uma mensagem e solicitando que o usuario preencha a caixa de texto.
+    <script>
+        let nome = window.prompt('Qual é o seu nome?') // Armazenando o valor do prompt na vareavel.
+        window.alert(`Olá, ${nome}! É uma prazer te conhecer!!`) // Exibindo o valor da vareavel atravéz do alert.
     </script>
 </body>
 </html>
