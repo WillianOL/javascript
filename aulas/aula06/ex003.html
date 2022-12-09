@@ -15,10 +15,32 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Me livrando da maldição de programadores :)</p>
+    <h1>Somando valores</h1>
+    <p>Somando valores e fazendo tratamento de dados!</p>
     
     <script>
+
+        //Forma de converter especificando qaul o tipo de valor será pedido. Número Inteiro
+        /*
+        let n1 = Number.parseInt(window.prompt("Digite um número: "))
+        let n2 = Number.parseInt(window.prompt("Digite outro número: "))
+        let s = n1 + n2
+        alert(`A soma entre ${n1} e ${n2} é ${s}`)
+        */ 
+
+        //Número real(com vírgula)
+        /*
+        let n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        let n2 = Number.parseFloat(window.prompt('Digite outro número '))
+        let s = n1 + n2
+        alert(`A soma entre ${n1} e ${n2} é ${s}`)
+        */
+
+        //Forma mais recente, onde o próprio JavaScript descobre se é inteiro ou real
+        let n1 = Number(window.prompt('Digite um número: '))
+        let n2 = Number(window.prompt('Digite outro número '))
+        let s = n1 + n2
+        alert(`A soma entre ${n1} e ${n2} é ${s}`)
         
     </script>
 </body>
