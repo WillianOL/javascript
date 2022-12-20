@@ -37,6 +37,9 @@
     <div class="resClass exemplos">
         Seleção por classe
     </div>
+    <div id="resQuery" class="exemplos">
+        Seleção por QuerySelector
+    </div>
 
     <script>
         //Com o Js, podemos manipular os elementos DOM e fazermos o que quisermos com eles.
@@ -47,14 +50,17 @@
         let p01 = document.getElementsByTagName('p')[0] //Selecionando o "p" através da TagName(por MARCA).
         document.write(p01.innerHTML) //Colocando o que está escrito em p01 no documento. 
 
-        let DivResId = document.getElementById('resId')
-        DivResId.style.background = "yellow"
+        let DivResId = document.getElementById('resId') //Selecionando um item por ID.
+        DivResId.style.background = "yellow" //Trocando o fundo da DIV que está na vareável.
 
-        let DivResName = document.getElementsByName("resName")[0]
-        DivResName.style.background = "red"
+        let DivResName = document.getElementsByName("resName")[0] //Selecionando um item por NAME.
+        DivResName.style.background = "red" //Trocando o fundo da DIV que está na vareável 
 
-        let DivResClass = document.getElementsByClassName("resClass")[0]
-        DivResClass.style.background = 'green'
+        let DivResClass = document.getElementsByClassName("resClass")[0] //Selecionando um item por CLASS.
+        DivResClass.style.background = 'green' //Trocando o fundo da DIV que está na vareável.
+
+        let DIvResQuery = document.querySelector('#resQuery') //Seleioando um item por QuerySelector. Usa a sintax do CSS.
+        DIvResQuery.style.background = 'orangered' //Trocando o fundo da DIV.
     </script>
 </body>
 
