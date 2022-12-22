@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            font: normal 16pt arial;
+            background-image: linear-gradient(to right, rgb(27, 9, 68), rgb(34, 10, 117));
+        }
+
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 50vh;
+            width: 50vw;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.568);
+        }
+
+        #number02, #number01{
+            width: 200px;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #BtnSomar{
+            width: 100px;
+            padding: 5px;
+            background-color: rgb(89, 9, 126);
+            color: white;
+            border-radius: 20px;
+        }
+
+        #res{
+            margin-top: 20px;
+        }
+
+        h1, div, input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Somando os números</h1>
+        <div class="conteriner">
+            <input type="number" name="number01" id="number01"> +
+            <input type="number" name="number02" id="number02">
+        </div>
+        <input type="button" value="Somar" id="BtnSomar">
+        <div id="res">
+            RESULTADO...
+        </div>
+    </section>
+
+    <script>
+        let txtn1 = document.getElementById('number01')
+        let txtn2 = document.getElementById('number02')
+        let BntSoma = document.getElementById('BtnSomar') 
+        BntSoma.addEventListener('click', SomarNumeros)
+
+        function SomarNumeros(){
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 + n2
+            let res = document.getElementById('res')
+
+            res.innerHTML = `O resultado da soma entre ${n1} e ${n2} é <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
