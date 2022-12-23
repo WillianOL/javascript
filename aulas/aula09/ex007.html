@@ -72,17 +72,20 @@
     </section>
 
     <script>
+        //Pegando os valures digitados nos inputs. Ainda em string.
         let txtn1 = document.getElementById('number01')
         let txtn2 = document.getElementById('number02')
+
+        //Adicionando o evento de clique para fazer a função
         let BntSoma = document.getElementById('BtnSomar') 
         BntSoma.addEventListener('click', SomarNumeros)
 
         function SomarNumeros(){
+            //Convertendo os valores digitados em Number.
             let n1 = Number(txtn1.value)
             let n2 = Number(txtn2.value)
-            let s = n1 + n2
-            let res = document.getElementById('res')
-
+            let s = n1 + n2 //Resultado da soma entre eles
+            let res = document.getElementById('res') //Selecionando a div onde vai ser colocado o texto da soma. 
             res.innerHTML = `O resultado da soma entre ${n1} e ${n2} é <strong>${s}</strong>`
         }
     </script>

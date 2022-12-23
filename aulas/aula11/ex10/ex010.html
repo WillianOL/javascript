@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas condicionais</title>
+    <link rel="stylesheet" href="../ex10/style.css">
+</head>
+<body>
+    <h1>Medidor de velocidade</h1>
+    <section>
+        <p>Qual é a sua velocidade?</p>
+        <div class="MedidorConteiner">
+            <label for="txtv1">Km/h</label>
+            <input type="number" name="txtv1" id="txtv1">
+            <input type="button" value="Verificar" id="Btn">
+        </div>
+        <div id="res">
+            Calculando...
+        </div>
+    </section>
+
+    <script>
+        let txtVelocidade = document.getElementById('txtv1') //Selecionando o input para fazer a converção
+        let resultado = document.getElementById('res') //Selecionando a Div onde vai ser colocado o texto
+        //Colocando o evento de clique e criando a função
+        let BtnVerificar = document.getElementById('Btn') 
+        BtnVerificar.addEventListener('click', VerificarVel)
+
+        function VerificarVel(){ //Função de clique
+            let velocidade = Number(txtVelocidade.value) //Transformando os números recebidos em 'Number'
+            resultado.innerHTML = `Sua velocidade é de <strong>${velocidade}Km/h.</strong>`
+            if( velocidade > 80){ //Se a velocidade for maior que 80, mostrar o texto abaixo
+                resultado.innerHTML += "<br>Opa! Você ultrapassou o limite permitido. <strong>MULTADO!</strong>"
+            } else{ //Se não, mostrar o texto abaixo.
+                resultado.innerHTML += "<br>Você está no limite permitido! Dirija sempre com cuidado."
+            }
+        }
+    </script>
+</body>
+</html>
