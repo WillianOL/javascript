@@ -1,6 +1,4 @@
 let contador = 1
-
-
 //===Estrutura de repetição com teste lógico no final===
 do{
     console.log(`Passo ${contador}`)
@@ -16,7 +14,3 @@ while( contador <= 200 ){
     contador++ //Adiconando mais 1
 }
 */
-
-
-
-
