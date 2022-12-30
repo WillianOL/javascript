@@ -1,3 +1,5 @@
+
+//===Estrutura de repetição com vareavel de controle: for===
 var n1 = 5
 for(var n2 = 1; n2 <= n1; n2++){ //O for contem o inicio, condição e incremento
     if(n2 == n1 ){
