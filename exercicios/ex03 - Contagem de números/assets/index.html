@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="../styles/estilo.css">
 </head>
 <body>
-    
+    <h1>Vamos contar</h1>
+    <section class="conteiner">
+        <div class="ConteinerInputs">
+            <div class="StyInputs">
+                <label for="nInicio">Início: </label>
+                <input type="number" name="nInicio" id="NumberInicio">
+            </div>
+            <div class="StyInputs">
+                <label for="NumberFim">Fim: </label>
+                <input type="number" name="nFim" id="NumberFim">
+            </div>
+            <div class="StyInputs">
+                <label for="NumberPasso">Passo: </label>
+                <input type="number" name="nPasso" id="NumberPasso">
+            </div>
+        </div>
+
+        <div class="BtnConteiner">
+            <input type="button" value="Contar" id="BtnContar">
+        </div>
+
+        <hr>
+
+        <div id="resultado">
+            
+        </div>
+    </section>
+
+    <script src="back-end.js"></script>
 </body>
 </html>
